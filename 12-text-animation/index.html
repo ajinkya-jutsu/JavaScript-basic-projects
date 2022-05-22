@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+  <div id="str"></div>
+
+  <script>
+    var string = "Hello, This is text animation tutorial.";
+    var str = string.split("");
+    var el = document.getElementById('str');
+    (function animate() {
+    str.length > 0 ? el.innerHTML += str.shift() : clearTimeout(running); 
+    var running = setTimeout(animate, 50);
+    })();
+  </script>
+
+</body>
+
+</html>
